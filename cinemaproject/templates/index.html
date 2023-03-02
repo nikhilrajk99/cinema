@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for i in result %}
+<img src="{{i.img.url}}" width="150" height="200">
+<a href="{% url 'cinemaapp:detail' i.id %}">{{i.name}}</a>
+<br>
+<!--{{i.desc}}-->
+<!--<br>-->
+<!--{{i.year}}-->
+<br>
+{% endfor %}
+{% endblock %}
+
